@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ERG Admin</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app">
+  <header>
+    <div class="t"><div class="h1">ERG Admin Board</div><div class="h2">Discord + Passcode</div></div>
+    <button class="badge" style="margin-left:auto" id="btn-login">Sign in</button>
+    <button class="badge" id="btn-logout">Log out</button>
+    <a class="badge" href="index.html">App</a>
+  </header>
+  <div class="container">
+    <div id="need-login" class="card hidden">
+      <h2>Sign in required</h2>
+      <p class="muted">Sign in with Discord to continue.</p>
+    </div>
+    <div id="denied" class="card hidden">
+      <h2>Access Denied</h2>
+      <p class="muted">Your Discord ID is not permitted.</p>
+    </div>
+    <div class="card">
+      <h2>Enter Admin</h2>
+      <p class="muted">Access requires: (1) Permitted Discord ID, (2) Admin passcode.</p>
+      <button id="btn-enter">Enter</button>
+      <button class="badge" id="btn-refresh">Refresh</button>
+    </div>
+    <div id="board" class="hidden">
+      <div class="card">
+        <h2>Recent Submissions</h2>
+        <table class="table" id="tbl-subs">
+          <thead><tr><th>ID</th><th>Type</th><th>User</th><th>Created</th><th>Payload</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="admin.js"></script>
+</body>
+</html>
